@@ -20,7 +20,8 @@ html, body {
   padding: 0; }
 
 body.page-template-home {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #12171a; }
 
 * {
   -webkit-font-smoothing: antialiased;
