@@ -1,0 +1,90 @@
+// General Styles
+html {
+	@include transition(1500ms, background-color, ease-in-out);
+}
+body.lb-open {
+	overflow: hidden;
+}
+* {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+.preblur {
+	@include blur(0px);
+	transition: 0.5s filter linear !important;
+	-webkit-transition: 0.5s filter linear !important;
+	-moz-transition: 0.5s filter linear !important;
+	-ms-transition: 0.5s filter linear !important;
+}
+.blur {
+	@include blur(5px);
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: $heading_font;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 24px;
+}
+div,p,a,span,input,textarea {
+	font-family: $body_font;
+	color: $white;
+}
+.main-btn {
+	text-transform: uppercase;
+	color: $white;
+	text-decoration: none;
+	padding: 12px 26px 12px 30px;
+	font-size: 7px;
+	letter-spacing: 4px;
+	font-weight: 200;
+	position: relative;
+	overflow: hidden;
+	font-weight: 500;
+	cursor: pointer;
+	z-index: 9;
+	@include max-content(width);
+// 	@include easeout(600ms);
+	span {
+		z-index: 999999;
+		position: relative;
+	}
+}
+.main-btn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark_grey;
+	z-index: 99;
+	@include translate(0,-100%,0);
+	@include easeout(600ms);
+}
+.main-btn:hover:after {
+	@include translate(0,-2px,0);
+}
+.main-btn.orange {
+	background-color: $orange;
+}
+.main-btn.orange:after {
+	
+}
+.main-btn.blue {
+	background-color: $dark_grey;
+}
+.main-btn.blue:after {
+	background-color: $orange;
+}
+input:not([type="submit"]):focus,textarea:focus {
+	outline-color: $orange;
+}
+*::selection {
+	background: $dark_grey;
+	color: $white;
+}
+*::-moz-selection {
+	background: $dark_grey;
+	color: $white;
+}
