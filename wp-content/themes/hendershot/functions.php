@@ -106,6 +106,7 @@ add_action( 'widgets_init', 'hendershot_widgets_init' );
  */
 function hendershot_scripts() {
 	wp_enqueue_style( 'hendershot-style', get_stylesheet_uri() );
+	wp_enqueue_style('mainstyles', get_template_directory_uri() . '/scss/main.css');
 
 	wp_enqueue_script( 'hendershot-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

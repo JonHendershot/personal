@@ -1,23 +1,14 @@
 // General Styles
-html {
-	@include transition(1500ms, background-color, ease-in-out);
+html, body {
+	margin: 0;
+	padding: 0;
 }
-body.lb-open {
+body.page-template-home {
 	overflow: hidden;
 }
 * {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-}
-.preblur {
-	@include blur(0px);
-	transition: 0.5s filter linear !important;
-	-webkit-transition: 0.5s filter linear !important;
-	-moz-transition: 0.5s filter linear !important;
-	-ms-transition: 0.5s filter linear !important;
-}
-.blur {
-	@include blur(5px);
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family: $heading_font;
@@ -26,9 +17,17 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: 20px;
 	line-height: 24px;
 }
+h1 {
+	font-size: 50px;
+	letter-spacing: 9px;
+}
 div,p,a,span,input,textarea {
 	font-family: $body_font;
 	color: $white;
+}
+.sub-title {
+	font-family: $heading_font;
+	text-transform: uppercase;
 }
 .main-btn {
 	text-transform: uppercase;
@@ -44,7 +43,6 @@ div,p,a,span,input,textarea {
 	cursor: pointer;
 	z-index: 9;
 	@include max-content(width);
-// 	@include easeout(600ms);
 	span {
 		z-index: 999999;
 		position: relative;
@@ -81,10 +79,10 @@ input:not([type="submit"]):focus,textarea:focus {
 	outline-color: $orange;
 }
 *::selection {
-	background: $dark_grey;
-	color: $white;
+	background: $white;
+	color: $black;
 }
 *::-moz-selection {
-	background: $dark_grey;
-	color: $white;
+	background: $white;
+	color: $black;
 }

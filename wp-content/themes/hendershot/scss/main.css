@@ -15,48 +15,35 @@
 /*************************************
   - - - - - - - - MIXINS - - - - - - - 
 **************************************/
-html {
-  transition: 1500ms background-color ease-in-out;
-  -webkit-transition: 1500ms background-color ease-in-out;
-  -moz-transition: 1500ms background-color ease-in-out;
-  -ms-transition: 1500ms background-color ease-in-out;
-  -o-transition: 1500ms background-color ease-in-out; }
+html, body {
+  margin: 0;
+  padding: 0; }
 
-body.lb-open {
+body.page-template-home {
   overflow: hidden; }
 
 * {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-.preblur {
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
-  transition: 0.5s filter linear !important;
-  -webkit-transition: 0.5s filter linear !important;
-  -moz-transition: 0.5s filter linear !important;
-  -ms-transition: 0.5s filter linear !important; }
-
-.blur {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -ms-filter: blur(5px);
-  -o-filter: blur(5px);
-  filter: blur(5px); }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   color: #fff;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 24px; }
 
+h1 {
+  font-size: 50px;
+  letter-spacing: 9px; }
+
 div, p, a, span, input, textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Georgia", serif;
   color: #fff; }
+
+.sub-title {
+  font-family: "Maven Pro", sans-serif;
+  text-transform: uppercase; }
 
 .main-btn {
   text-transform: uppercase;
@@ -117,12 +104,12 @@ input:not([type="submit"]):focus, textarea:focus {
   outline-color: #CA5D44; }
 
 *::selection {
-  background: #222629;
-  color: #fff; }
+  background: #fff;
+  color: #12171a; }
 
 *::-moz-selection {
-  background: #222629;
-  color: #fff; }
+  background: #fff;
+  color: #12171a; }
 
 /*************************************
   - - - - - - - MODULES - - - - - - - -
@@ -130,6 +117,37 @@ input:not([type="submit"]):focus, textarea:focus {
 /*************************************
   - - - - - - - PAGES - - - - - - - -
 **************************************/
+section.home-container {
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+  section.home-container .page-content {
+    padding-right: 100px;
+    border-right: 6px solid #fff;
+    padding-top: 20px;
+    padding-bottom: 14px; }
+    section.home-container .page-content * {
+      text-align: right; }
+    section.home-container .page-content h1 {
+      margin-bottom: 20px;
+      margin-top: 0; }
+    section.home-container .page-content p {
+      letter-spacing: 15px;
+      font-weight: 600;
+      margin: 0;
+      font-size: 21px;
+      padding-right: 2px; }
+
 /*************************************
   - - - - - - - RESPOND - - - - - - - -
 **************************************/

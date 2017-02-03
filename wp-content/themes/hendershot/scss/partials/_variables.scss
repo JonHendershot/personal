@@ -3,13 +3,13 @@
 **************************************/
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 @import '../fonts/stylesheet.css';
-$heading-font: "Bebas Neue", sans-serif;
-$body-font: "Roboto", sans-serif;
+$heading-font: "Maven Pro", sans-serif;
+$body-font: "Georgia", serif;
 
 /*************************************
   - - - - - - COLOR PALETTE - - - - - 
 **************************************/
-$black: #000;
+$black: #12171a;
 $white: #fff;
 $offwhite: #F6F6F6;
 $gray: #959595;
@@ -22,6 +22,7 @@ $divider_color: #C8422C;
 **************************************/
 $max-width : 1300px;
 $home-width : 60%;
+$side_padding: 100px;
 
 /*************************************
   - - - - - - - - MIXINS - - - - - - - 
