@@ -142,3 +142,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Add footer menu
+ */
+function register_menu() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_menu' );

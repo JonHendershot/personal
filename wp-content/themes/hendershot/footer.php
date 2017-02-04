@@ -8,9 +8,19 @@
  *
  * @package hendershot
  */
+wp_reset_query();
+$footer_trigger = get_field('menu_display');
+$menu_args = array(
+	'menu' => 'Footer Menu',
+	'theme_location' => 'footer-menu'
+);
+
+if($footer_trigger !== 'Off'){
+	wp_nav_menu( $menu_args );	
+}
 
 ?>
-
+ 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

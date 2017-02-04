@@ -22,3 +22,4 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<div id="content" class="site-content">
+		<?php wp_nav_menu(array('theme_location' => 'Primary', 'menu' => 'Main Menu')); ?>

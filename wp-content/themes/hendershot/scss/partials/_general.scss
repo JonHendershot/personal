@@ -3,15 +3,118 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-body.page-template-home {
+body.page-template {
 	overflow: hidden;
 	background-color: $black;
+	
+	#page {
+		height: 100vh;
+		width: 100vw;
+		@include flexbox(center,center);
+		
+		#content {
+			@include calc(height,"100% - "$side_padding);
+			border: 2px solid $white;
+		}
+	}
+}
+body.page-template-home {
+	#page {
+		#content {
+			width: 100vw;
+			border:none;
+		}
+	}
+
+}
+#content {
+	@include calc(width,"100% - "$side_padding);
+	@include flexbox(center,center);
+	position: relative;
+	border: 2px solid $black;
+	
+	ul.menu {
+		position: absolute;
+		@include flexbox(center,space-between);
+		list-style: none;
+		margin: 0;
+		padding: 0 12px;
+		background-color: $black;
+		li {
+			padding: 0 12px;
+			a{
+				font-family: $heading_font;
+				text-transform: uppercase;
+				position: relative;
+				font-size: 10px;
+				letter-spacing: 8px;
+				font-weight: 800;	
+				text-decoration: none;
+				padding-left: 8px;
+			}
+			a:after {
+				content: '';
+				background-image: none;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				height: 1px;
+				width: 95%;
+				background-color: $white;
+				@include scaleX(0);
+				@include easeout(400ms);
+				z-index: 99;
+				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+			}
+		}
+		a:hover:after, li.current-menu-item a:after {
+			@include scaleX(1);
+		}
+		
+	}
+	#menu-footer-menu {
+		bottom: 0;
+		left: 0;
+		margin-left: 20px;
+		@include translate(0,50%,0);
+	}
+	#menu-main-menu {
+		top: 0;
+		right: 0;
+		margin-right: 20px;
+		@include translate(0,-57%,0);
+	}
+}
+
+section.main-body.fixed {
+		
+	
+	.container {
+		
+		
+		.content {
+			max-width: 100%;
+			max-height: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+section {
+	.content.sm {
+		@include calc(width, "100% - (5*" $side_padding")");
+		margin: 0 auto;
+	}
 }
 * {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,a {
 	font-family: $heading_font;
 	color: $white;
 	text-transform: uppercase;
@@ -22,13 +125,46 @@ h1 {
 	font-size: 50px;
 	letter-spacing: 9px;
 }
-div,p,a,span,input,textarea {
+div,p,span,input,textarea {
 	font-family: $body_font;
 	color: $white;
 }
 .sub-title {
 	font-family: $heading_font;
 	text-transform: uppercase;
+}
+a {
+	text-transform: uppercase;
+	font-size: 9px;
+	font-weight: 800;
+	text-decoration: none;
+	letter-spacing: 1px;
+	position: relative;
+}
+a.next:after, a.previous:after {
+	content: '';
+	background-size: contain;
+	height: 8px;
+	width: 15px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/arrow_white.png');
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+a.light:after {
+	background-image: url('../images/arrow.png');
+}
+a.next:after {
+	right: -20px;
+	@include rotate(180deg);
+}
+a.prev {
+	left: -20px;
 }
 .main-btn {
 	text-transform: uppercase;

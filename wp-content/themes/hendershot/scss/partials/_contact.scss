@@ -1,0 +1,91 @@
+section.contact {
+	width: 100%;
+	
+	.form {
+		margin-top: 60px;
+		span.field-group {
+			@include flexbox(center, space-between);
+			
+			span {
+				width: 48%;
+			}
+		}
+		textarea {
+			@include calc(width,"100% - 30px");
+		}
+		
+		input,textarea {
+			background-color: transparent;
+			text-transform: uppercase;
+			font-family: $heading_font;
+			color: $white;
+			letter-spacing: 6px;
+			font-size: 14px;
+			font-weight: 600;
+			outline: none;
+			@include placeholder {
+				color: $white;
+			}
+		}
+		textarea:focus, textarea:active {
+			letter-spacing: 1px;
+			text-transform: inherit;
+			@include placeholder {
+				color: $black;
+			}
+		}
+		input[type="text"]:focus, input[type="email"]:focus{
+			@include placeholder {
+				color: $black;
+			}
+		}
+		input[type="text"], input[type="email"]{
+			border: none;
+			border-bottom: 1px solid $white;
+			padding: 10px 8px 10px 0;
+			@include calc(width,"100% - 8px");
+		}
+		textarea {
+			padding: 15px;
+			border: 1px solid $white;	
+			resize: none;
+			margin-top: 20px;
+		}
+		.submit {
+			border: none;
+			outline: none;
+			letter-spacing: 4px;
+			padding: 0;
+			cursor: pointer;
+			font-family: $heading_font !important;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			position: relative;
+			display: inline-block;
+		}
+		.submit:after {
+			content: '';
+			background-image: none;
+			display: block;
+			position: absolute;
+			top: 2px;
+			left: -5px;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 1px;
+			width: 110%;
+			background-color: $white;
+			@include scaleX(0);
+			@include easeout(400ms);
+			z-index: 99;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+		}
+		.submit:hover:after {
+			@include scale(1);
+		}
+		
+	}
+}

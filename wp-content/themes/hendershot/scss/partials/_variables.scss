@@ -22,7 +22,7 @@ $divider_color: #C8422C;
 **************************************/
 $max-width : 1300px;
 $home-width : 60%;
-$side_padding: 100px;
+$side_padding: 120px;
 
 /*************************************
   - - - - - - - - MIXINS - - - - - - - 
@@ -50,6 +50,12 @@ $side_padding: 100px;
     transform: rotate($deg);
 }
 @mixin scale($percent) {
+	    -ms-transform: scale($percent); /* IE 9 */
+    -webkit-transform: scale($percent); /* Chrome, Safari, Opera */
+    -moz-transform: scale($percent); /* Mozilla ? */
+    transform: scale($percent);
+}
+@mixin scaleX($percent) {
 	    -ms-transform: scale($percent); /* IE 9 */
     -webkit-transform: scale($percent); /* Chrome, Safari, Opera */
     -moz-transform: scale($percent); /* Mozilla ? */
