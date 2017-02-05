@@ -9,11 +9,24 @@
 		$cc = 1;
 		$intro_body = get_field('introduction');
 		$conclusion_body = get_field('conclusion');
+		
+		// Title Fix
+		// The heading font face displays an odd space before the first letter, causing some spacing issues. Thus, we will define which letters have issues, detect if the title starts with one of those letters, and apply a css class to remedy the issue should it be present.
+		$title_first = substr($project_title,0,1);
+		$title_fix_array = array('J','T','V','W','X','Y'); // these are the letters that are ok
+		
+		if(! in_array($title_first, $title_fix_array)){
+			$fix_class = "space-fix";
+		}else {
+			$fix_class = '';
+		}
+		
+		
 ?>
 
 <div class="project-section project-heading contained">
 	<a href="<?php echo home_url() . '/projects'; ?>" class="previous light">Return to Projects</a>
-	<h1><?php echo $project_title; ?></h1>
+	<h1 class="<?php echo $fix_class; ?>"><?php echo $project_title; ?></h1>
 	<p class="sub-title">
 		<?php 
 			foreach($project_categories as $category){
