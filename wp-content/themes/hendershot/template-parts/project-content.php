@@ -25,21 +25,24 @@
 ?>
 
 <div class="project-section project-heading contained">
-	<a href="<?php echo home_url() . '/projects'; ?>" class="previous light">Return to Projects</a>
-	<h1 class="<?php echo $fix_class; ?>"><?php echo $project_title; ?></h1>
-	<p class="sub-title">
-		<?php 
-			foreach($project_categories as $category){
-											
-				echo "<span class='cat-name cat-$category->name'>$category->name</span>";
-				if($cc < $cat_number){
-					echo "<span class='cat-divider'>-</span>";
+	<div class="heading-container">
+		<a href="<?php echo home_url() . '/projects'; ?>" class="previous light">Return to Projects</a>
+		<h1 class="<?php echo $fix_class; ?>"><?php echo $project_title; ?></h1>
+		<p class="sub-title">
+			<?php 
+				foreach($project_categories as $category){
+												
+					echo "<span class='cat-name cat-$category->name'>$category->name</span>";
+					if($cc < $cat_number){
+						echo "<span class='cat-divider'>-</span>";
+					}
+					
+					$cc++;
 				}
-				
-				$cc++;
-			}
-		?>
-	</p>
+			?>
+		</p>
+		<div class="scroll-hint">scroll down</div>
+	</div>
 </div>
 <div class="project-section project-introduction contained">
 	<h2>Introduction</h2>

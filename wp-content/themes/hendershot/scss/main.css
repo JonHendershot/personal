@@ -171,7 +171,8 @@ h1, h2, h3, h4, h5, h6, a {
   color: #fff;
   text-transform: uppercase;
   font-size: 20px;
-  line-height: 24px; }
+  line-height: 24px;
+  word-wrap: break-word; }
 
 h1 {
   font-size: 50px;
@@ -193,13 +194,13 @@ a {
   letter-spacing: 1px;
   position: relative; }
 
-a.next:after, a.previous:after {
+a.next:after, a.previous:after, .scroll-hint:before {
   content: '';
   background-size: contain;
   height: 8px;
   width: 15px;
   position: absolute;
-  top: 0;
+  top: 1px;
   bottom: 0;
   margin: auto;
   background-position: center center;
@@ -208,7 +209,7 @@ a.next:after, a.previous:after {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; }
 
-a.light:after {
+a.light:after, .scroll-hint:before {
   background-image: url("../images/arrow.png"); }
 
 a.next:after {
@@ -223,6 +224,29 @@ a.next:after {
 
 a.previous:after {
   left: -20px; }
+
+.scroll-hint:before {
+  left: -11px;
+  height: 7px;
+  width: 7px; }
+
+.scroll-hint {
+  position: absolute;
+  font-family: "Maven Pro", sans-serif;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  bottom: 0;
+  left: 0;
+  -ms-transform: rotate(-90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-90deg);
+  /* Chrome, Safari, Opera */
+  -moz-transform: rotate(-90deg);
+  /* Mozilla ? */
+  transform: rotate(-90deg);
+  transform-origin: left; }
 
 .main-btn {
   text-transform: uppercase;
@@ -747,7 +771,16 @@ body.single section.main-body {
       padding: 120px 0;
       margin: 0 auto; }
   body.single section.main-body article .project-heading {
-    margin-top: 0; }
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    margin-top: 0;
+    position: relative; }
     body.single section.main-body article .project-heading h1 {
       margin-top: 50px; }
   body.single section.main-body article .project-nav {
@@ -791,4 +824,45 @@ body.single section.main-body {
     width: -moz-calc(100% - 60px);
     width: -webkit-calc(100% - 60px);
     width: calc(100% - 60px);
-    margin: 30px auto; } }
+    margin: 30px auto; }
+    body.single #page #content section.main-body article.project-study .project-heading {
+      height: 85vh;
+      margin: 0 auto !important; }
+      body.single #page #content section.main-body article.project-study .project-heading .heading-container {
+        margin-bottom: 17vh; }
+        body.single #page #content section.main-body article.project-study .project-heading .heading-container a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 9px;
+          margin-left: 11px; }
+        body.single #page #content section.main-body article.project-study .project-heading .heading-container a:after {
+          height: 7px;
+          width: 7px;
+          left: -11px;
+          top: -1px; }
+    body.single #page #content section.main-body article.project-study .project-section h1 {
+      word-spacing: 680px;
+      font-size: 48px;
+      line-height: 40px;
+      margin-left: -3.5px; }
+    body.single #page #content section.main-body article.project-study .project-section .sub-title span {
+      font-size: 12px;
+      display: block; }
+    body.single #page #content section.main-body article.project-study .project-section .sub-title span.cat-divider {
+      display: none; }
+    body.single #page #content section.main-body article.project-study .project-section .project-copy {
+      font-size: 15px; } }
+
+@media (max-width: 500px) {
+  body.single #page #content section.main-body article.project-study .project-section {
+    margin: 30px auto; }
+  body.single #page #content section.main-body article.project-study .contained {
+    width: -o-calc(100% -  60px);
+    width: -moz-calc(100% -  60px);
+    width: -webkit-calc(100% -  60px);
+    width: calc(100% -  60px); }
+  body.single #page #content section.main-body article.project-study .project-cat .project-copy {
+    padding: 0 30px; }
+  body.single #page #content section.main-body article.project-study .project-file-container .project-wrapper.contained {
+    padding: 30px 0; } }

@@ -96,7 +96,9 @@ body.single {
 				}
 			}
 			.project-heading {
+				@include flexbox(center,flex-start);
 				margin-top: 0;
+				position: relative;
 				
 				h1 {
 					margin-top: 50px;
