@@ -666,6 +666,9 @@ section.contact {
       /* Mozilla ? */
       transform: scale(1); }
 
+body.single #content {
+  max-width: 1400px; }
+
 body.single section.main-body {
   width: 100%; }
   body.single section.main-body article .project-section {

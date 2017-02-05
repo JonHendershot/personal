@@ -1,5 +1,8 @@
 $gutter : 2.3 * $side_padding;
 body.single {
+	#content {
+		max-width: 1400px;
+	}
 	section.main-body {
 		width: 100%;
 		article {
