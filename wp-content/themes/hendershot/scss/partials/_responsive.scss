@@ -1,0 +1,53 @@
+// Variables
+$half_side_pad : 0.5 * $side_padding;
+$quarter_side_pad : 0.25 * $side_padding;
+
+@media (max-width:900px){
+	// Single Page
+	body.single {
+		section.main-body {
+			article.project-study {
+				.project-section {
+					margin: $half_side_pad auto;
+				}
+				.contained {
+					@include calc(width, "100% - " $side_padding);
+				}
+				.project-cat {
+					.project-copy {
+						padding: 0 $half_side_pad;
+					}
+				}
+				.project-file-container {
+					.project-wrapper.contained {
+						padding: $half_side_pad 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:680px){
+	// Single Page
+	body.single {
+		#page {
+			#content {
+				@include calc(width, "100% -" $half_side_pad);
+				margin: $quarter_side_pad auto;
+				section.main-body {
+					article.project-study {
+						.contained {
+						
+						}
+						.project-cat {
+							.project-copy {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}

@@ -772,3 +772,23 @@ body.single section.main-body {
 /*************************************
   - - - - - - - RESPOND - - - - - - - -
 **************************************/
+@media (max-width: 900px) {
+  body.single section.main-body article.project-study .project-section {
+    margin: 60px auto; }
+  body.single section.main-body article.project-study .contained {
+    width: -o-calc(100% -  120px);
+    width: -moz-calc(100% -  120px);
+    width: -webkit-calc(100% -  120px);
+    width: calc(100% -  120px); }
+  body.single section.main-body article.project-study .project-cat .project-copy {
+    padding: 0 60px; }
+  body.single section.main-body article.project-study .project-file-container .project-wrapper.contained {
+    padding: 60px 0; } }
+
+@media (max-width: 680px) {
+  body.single #page #content {
+    width: -o-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    margin: 30px auto; } }
