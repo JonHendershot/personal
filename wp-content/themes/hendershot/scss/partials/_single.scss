@@ -1,0 +1,116 @@
+$gutter : 2.3 * $side_padding;
+body.single {
+	section.main-body {
+		width: 100%;
+		article {
+			
+			.project-section {
+				margin: $side_padding 0;
+				h1 {
+					font-weight: 800;
+					font-size: 60px;
+					letter-spacing: 2px;
+					margin: 0;
+					line-height: 45px;
+				}
+				p.sub-title {
+					margin: 0;
+					margin-top: 10px;
+					span {
+						font-family: $heading_font;
+						font-size: 16px;
+						margin-right: 10px;
+						font-weight: 600;
+					}
+				}
+				h2 {
+					font-weight: 800;
+					font-size: 30px;
+					margin: 0 0 45px 0;
+				}
+				p.project-copy {
+					font-size: 18px;
+					line-height: 1.7em;
+					font-weight: 100;
+				}
+				a {
+					font-size: 12px;				
+				}
+				a.previous {
+				margin-left: 16px;
+				}
+				a.next {
+					margin-right: 16px;
+				}
+				.project-copy {
+					text-align: justify;
+				}
+			}
+			.project-cat {
+				position: relative;
+				width: 100% !important;
+				
+				.title-wrapper {
+					    width: max-content;
+					    position: absolute;
+					    height: 26px;
+					    padding: 0 50px;
+					    @include transrotate(-50.5%,0,0,-90deg);
+					    top: 0;
+					    bottom: 0;
+					    margin: auto;
+					    background-color: $white;
+				}
+				p {
+					$padd : 0.5 * $gutter;
+					padding: 0 $padd;
+				}
+			}
+			
+			.contained {
+				@include calc(width,"100% - " $gutter);
+				margin: $side_padding auto;
+			}
+			
+			.project-file-container {
+				@include calc(width,"100% + 4px");
+				@include translate(-2px,0,0);
+				background-color: $black;
+				
+				.project-wrapper {
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+				}
+				.project-wrapper.contained {
+					padding: 120px 0;
+					margin: 0 auto;
+				}
+			}
+			.project-heading {
+				margin-top: 0;
+				
+				h1 {
+					margin-top: 50px;
+				}
+			}
+			.project-nav {
+				margin: -40px auto 50px;
+				position: relative;
+				@include flexbox(center,flex-end);
+				a.previous {
+					margin-right: auto;
+					margin-left: 16px;
+				}
+				a.next {
+					margin-right: 16px;
+				}
+				a {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

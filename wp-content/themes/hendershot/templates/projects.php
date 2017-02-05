@@ -15,9 +15,9 @@
 ?>
 
 <section class="projects main-body fixed">
-	<div class="project-nav previous"><!-- <img src="<?php echo get_template_directory_uri() . '/images/nav-arrow.png'; ?>" /> --></div>
-	<div class="project-nav next"><!-- <img src="<?php echo get_template_directory_uri() . '/images/nav-arrow.png'; ?>" /> --></div>
-	<div class="container">
+	<div class="project-nav previous" data-id="<?php echo $number_posts; ?>"><!-- <img src="<?php echo get_template_directory_uri() . '/images/nav-arrow.png'; ?>" /> --></div>
+	<div class="project-nav next" data-id="<?php echo '2'; ?>"><!-- <img src="<?php echo get_template_directory_uri() . '/images/nav-arrow.png'; ?>" /> --></div>
+	<div class="container" data-count="<?php echo $number_posts; ?>">
 			<div class="content projects-container">
 				<?php while($query->have_posts()) : $query->the_post(); 
 					
@@ -36,7 +36,7 @@
 					}
 					
 				?>
-					<div class="project-wrapper <?php echo $active_project . ' ' . $color_scheme; ?>" style="background-image:url(<?php echo $image; ?>);">
+					<div class="project-wrapper <?php echo "project-$xx $active_project $color_scheme"; ?>" style="background-image:url(<?php echo $image; ?>);">
 						<div class="project-content">
 							<a href="<?php the_permalink(); ?>" class="content-link">
 								<h1><?php echo $title; ?></h1>

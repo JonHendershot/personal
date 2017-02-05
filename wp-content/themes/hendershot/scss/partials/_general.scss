@@ -27,11 +27,36 @@ body.page-template-home {
 	}
 
 }
+body.single {
+	#page {
+		#content {
+			$body_margin : 0.5 * $side_padding;
+			margin: $body_margin auto;
+			padding: $body_margin 0;
+			
+			ul.menu {
+				background-color: $white;
+				li {
+					a {
+						color: $black;
+					}
+					a:after {
+						background-color: $black;
+					}
+				}
+			}
+			* {
+				color: $black;
+			}
+		}
+	}
+}
 #content {
 	@include calc(width,"100% - "$side_padding);
 	@include flexbox(center,center);
 	position: relative;
 	border: 2px solid $black;
+	margin: 0 auto;
 	
 	ul.menu {
 		position: absolute;
@@ -163,7 +188,7 @@ a.next:after {
 	right: -20px;
 	@include rotate(180deg);
 }
-a.prev {
+a.previous:after {
 	left: -20px;
 }
 .main-btn {

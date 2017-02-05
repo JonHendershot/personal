@@ -20,7 +20,12 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 				@include flexbox(center,center);
-				position: relative;
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include ease(1200ms);
+				backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
 				.project-content {
 /*
 					position: absolute;
@@ -119,6 +124,7 @@
 			@include flexbox(center,center);
 			backface-visibility: hidden;
 			-webkit-backface-visibility: hidden;
+			cursor: pointer;
 			.inner-bubble {
 				background-color: $black;
 				height: 6px;
@@ -127,7 +133,7 @@
 				
 			}
 		}
-		.bubble.active {
+		.bubble.active, .bubble:hover {
 			opacity: 0.85;
 			background-color: $white;
 			.inner-bubble {
@@ -150,6 +156,7 @@
 		background-position: center center;
 		backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
+		cursor: pointer;
 	}
 	.project-nav.next {
 		right: -12px;
