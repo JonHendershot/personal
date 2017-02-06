@@ -407,6 +407,9 @@ body.page-template-home {
 									font-size: 9px;
 									color: $white;
 								}
+								span:not(.cat-total){
+									display: none;
+								}
 							}
 						}
 					}

@@ -51,8 +51,14 @@
 										}
 									$cc++;
 									}
-									
+									if($cat_number > 1){
+										$plural = 's';
+									}else {
+										$plural = '';
+									}
+									echo "<span class='cat-total'>$cat_number Role$plural</span>";
 									?>
+									
 								</p>
 							</a>
 						</div>

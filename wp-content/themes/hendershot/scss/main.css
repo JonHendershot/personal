@@ -1146,6 +1146,8 @@ body.page-template-home #content .page-content {
       section.projects .container .content.projects-container .project-wrapper .project-content a p.sub-title span {
         font-size: 9px;
         color: #fff; }
+      section.projects .container .content.projects-container .project-wrapper .project-content a p.sub-title span:not(.cat-total) {
+        display: none; }
     section.projects .container .content.projects-container .project-wrapper a.view-project {
       right: 16px;
       bottom: -45%;
