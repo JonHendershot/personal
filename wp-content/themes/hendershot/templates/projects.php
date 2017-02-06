@@ -56,7 +56,7 @@
 									}else {
 										$plural = '';
 									}
-									echo "<span class='cat-total'>$cat_number Role$plural</span>";
+									// echo "<span class='cat-total'>$cat_number Role$plural</span>";
 									?>
 									
 								</p>
