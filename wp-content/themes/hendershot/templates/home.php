@@ -8,8 +8,10 @@
 
 <section class="home-container" style="background-image: url(<?php echo $image; ?>);">
 	<div class="page-content">
-		<h1>Jon Hendershot</h1>
-		<p class="sub-title">Web Developer</p>
+		<div>
+			<h1>Jon Hendershot</h1>
+			<p class="sub-title">Web Developer</p>
+		</div>
 	</div>
 </section>
 

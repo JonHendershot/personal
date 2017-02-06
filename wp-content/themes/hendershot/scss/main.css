@@ -1015,11 +1015,29 @@ body.page-template-home #content .page-content {
   body.page-template-home #content .page-content {
     padding-right: 30px;
     z-index: 99;
-    width: 90%;
-    border: 6px solid #fff;
-    padding: 40px 0;
+    width: -o-calc(100% -  60px);
+    width: -moz-calc(100% -  60px);
+    width: -webkit-calc(100% -  60px);
+    width: calc(100% -  60px);
+    height: -o-calc(100% -  60px);
+    height: -moz-calc(100% -  60px);
+    height: -webkit-calc(100% -  60px);
+    height: calc(100% -  60px);
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    justify-content: center;
+    -webkit-justify-content: center;
+    border: 2px solid #fff;
+    padding: 0;
     margin: 0 auto; }
-    body.page-template-home #content .page-content h1, body.page-template-home #content .page-content p {
+    body.page-template-home #content .page-content div {
+      width: 90%;
+      margin: 0 auto 19px; }
+    body.page-template-home #content .page-content h1, body.page-template-home #content .page-content p, body.page-template-home #content .page-content div {
       text-align: center;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
@@ -1027,7 +1045,8 @@ body.page-template-home #content .page-content {
       transform: translate3d(0, 0, 0); }
     body.page-template-home #content .page-content h1 {
       margin-bottom: 12px;
-      font-size: 46px; }
+      font-size: 37px;
+      padding: 0; }
     body.page-template-home #content .page-content p.sub-title {
       font-size: 15px;
       padding-right: 0; }
@@ -1185,14 +1204,18 @@ span:not(.cat-total){
     line-height: 1.2em; }
   body.page-template-home #page #content #menu-main-menu {
     margin: auto; }
+  body.page-template-home #page #content .mobile-menu-trigger {
+    z-index: 999;
+    margin-right: 40px; }
   body.page-template-home #page #content .mobile-menu-trigger.close {
     right: 30px;
     z-index: 999; }
   body.page-template-home #page #content section.home-container .page-content h1 {
     text-align: left;
-    padding-left: 15px; }
+    padding-left: 0;
+    font-size: 42px; }
   body.page-template-home #page #content section.home-container .page-content p.sub-title {
     letter-spacing: 6px;
     text-align: left;
-    padding-left: 18px;
+    padding-left: 5px;
     font-size: 12px; } }
