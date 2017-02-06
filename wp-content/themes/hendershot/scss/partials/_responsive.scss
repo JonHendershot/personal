@@ -346,7 +346,7 @@ body.page-template-home {
 				opacity: 1;
 				visibility: visible;
 			}
-			.mobile-menu-trigger {
+			.mobile-menu-trigger:not(.close) {
 				visibility: visible;
 			}
 		}

@@ -27,6 +27,16 @@
 	});
 }(jQuery));
 
+(function vhFix($){
+	var vhItem = $('.vh');
+	
+	vhItem.each(function(){
+		var height = vhItem.height();
+		console.log(height);
+		
+		$(this).css({'height' : height});
+	});
+}(jQuery));
 function nextProject(postID){
 	var $ = jQuery,
 		nextPostID = parseInt(postID) + 1,

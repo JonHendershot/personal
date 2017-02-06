@@ -1114,7 +1114,7 @@ body.page-template-home #content .page-content {
   #page #content .menu-main-menu-container.open, #page #content .menu-footer-menu-container.open {
     opacity: 1;
     visibility: visible; }
-  #page #content .mobile-menu-trigger {
+  #page #content .mobile-menu-trigger:not(.close) {
     visibility: visible; }
   body.page-template #page #content .mobile-menu-trigger {
     visibility: visible;
