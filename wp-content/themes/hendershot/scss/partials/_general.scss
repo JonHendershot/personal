@@ -131,8 +131,9 @@ section.main-body.fixed {
 }
 section {
 	.content.sm {
-		@include calc(width, "100% - (5*" $side_padding")");
+		@include calc(width, "100% - " $side_padding);
 		margin: 0 auto;
+		max-width: 730px;
 	}
 }
 * {
@@ -208,6 +209,8 @@ a.previous:after{
     left: 0;
     @include rotate(-90deg);
     transform-origin: left;
+    margin-bottom: 6px;
+    display: none;
 }
 .main-btn {
 	text-transform: uppercase;
@@ -265,4 +268,46 @@ input:not([type="submit"]):focus,textarea:focus {
 *::-moz-selection {
 	background: $white;
 	color: $black;
+}
+.mobile-menu-trigger {
+	font-family: $heading_font;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 10px;
+    letter-spacing: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0 20px 0 28px;
+    position: absolute;
+    background-color: $white;
+
+    visibility: hidden;
+}
+.mobile-menu-trigger.header {
+    top: 0;
+    right: 0;
+    @include translate(0,-60%,0);
+    margin-right: 20px;
+}
+.mobile-menu-trigger.footer {
+	bottom: 0;
+	left: 0;
+    @include translate(0,60%,0);
+    margin-left: 20px;
+}
+.mobile-menu-trigger.close {
+	z-index: 99999;
+	color: $white !important;
+	font-size: 40px;
+	background-color: transparent;
+	@include translate(0,0,0);
+	margin: -10px -9px 0 0;
+	padding: 0;
+	visibility: hidden;
+	top: 0;
+	right: 0;
+}
+
+.mobile-menu-trigger.close.open {
+	visibility: visible !important;
 }

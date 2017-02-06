@@ -9,7 +9,23 @@
 	});
 	
 }(jQuery));
-
+(function mobileMenu($){
+	$('.mobile-menu-trigger').click(function(){
+		var menuSelect = $(this).attr('data-menu'),
+			menu = $('.' + menuSelect);
+			
+			console.log(menuSelect);
+		
+		if( ! menu.hasClass('open') ){
+			menu.addClass('open');
+			$('.mobile-menu-trigger').addClass('open');
+			$('.mobile-menu-trigger.close').attr('data-menu',menuSelect);
+		}else {
+			menu.removeClass('open');
+			$('.mobile-menu-trigger').removeClass('open');
+		}
+	});
+}(jQuery));
 
 function nextProject(postID){
 	var $ = jQuery,
