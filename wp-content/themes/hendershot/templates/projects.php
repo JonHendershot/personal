@@ -40,6 +40,8 @@
 						<div class="project-content">
 							<a href="<?php the_permalink(); ?>" class="content-link">
 								<h1><?php echo $title; ?></h1>
+							</a>
+							<a href="<?php the_permalink(); ?>" class="content-link">
 								<p class="sub-title">
 									<?php foreach($categories as $category){
 										

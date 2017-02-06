@@ -26,7 +26,6 @@
 		}
 	});
 }(jQuery));
-
 (function vhFix($){
 	var vhItem = $('.vh');
 	
@@ -37,6 +36,7 @@
 		$(this).css({'height' : height});
 	});
 }(jQuery));
+
 function nextProject(postID){
 	var $ = jQuery,
 		nextPostID = parseInt(postID) + 1,
