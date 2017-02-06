@@ -1125,7 +1125,7 @@ body.page-template-home #content .page-content {
   body.page-template-projects #page #content .mobile-menu-trigger.footer {
     display: none; }
   section.projects .container .content.projects-container .project-wrapper {
-    height: 70%; }
+    height: 68%; }
     section.projects .container .content.projects-container .project-wrapper .project-content {
       position: absolute;
       bottom: 0;
@@ -1155,7 +1155,7 @@ span:not(.cat-total){
           color: #fff; }
     section.projects .container .content.projects-container .project-wrapper a.view-project {
       right: 16px;
-      bottom: -45%;
+      bottom: -50%;
       color: #fff;
       width: max-content;
       width: -webkit-max-content;

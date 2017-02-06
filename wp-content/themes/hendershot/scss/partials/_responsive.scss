@@ -384,7 +384,7 @@ body.page-template-home {
 		.container {
 			.content.projects-container {
 				.project-wrapper {
-					height: 70%;
+					height: 68%;
 					.project-content {
 						position: absolute;
 						bottom: 0;
@@ -417,8 +417,8 @@ span:not(.cat-total){
 						}
 					}
 					a.view-project {
-						right: 16px;
-						bottom: -45%;
+						right: 16px; // 16px for bottom of frame
+						bottom: -50%; // -47% for bottom of frame
 						color: $white;
 						@include max-content(width);
 					}
