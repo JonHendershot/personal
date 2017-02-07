@@ -20,6 +20,13 @@ html, body {
   padding: 0;
   overflow-x: hidden; }
 
+.index-image {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 10px;
+  height: auto; }
+
 body.page-template {
   overflow: hidden;
   background-color: #12171a; }

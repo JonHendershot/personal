@@ -21,6 +21,8 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<?php $image_url = get_the_post_thumbnail_url($post->ID, 'large'); ?>
+	<img src="<?php echo $image_url; ?>" class="index-image"/>
 	<div id="content" class="site-content">
 		<?php wp_nav_menu(array('theme_location' => 'Primary', 'menu' => 'Main Menu')); ?>
 		<div class="mobile-menu-trigger header" data-menu="menu-main-menu-container">Menu</div>
