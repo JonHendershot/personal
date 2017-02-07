@@ -485,7 +485,7 @@ span:not(.cat-total){
 		#page {
 			#content {
 				.menu-main-menu-container, .menu-footer-menu-container {
-					@include translate(0,$half_header_margin,0);
+					@include translate(-15px,$half_header_margin,0);
 				}
 				#menu-main-menu {
 					margin: auto;
