@@ -25,7 +25,8 @@ html, body {
   opacity: 0;
   visibility: hidden;
   width: 10px;
-  height: auto; }
+  height: auto;
+  left: -200vw; }
 
 body.page-template {
   overflow: hidden;
