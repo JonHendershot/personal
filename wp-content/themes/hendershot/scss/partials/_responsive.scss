@@ -318,7 +318,7 @@ body.page-template-home {
 				left: auto;
 				height: 100vh;
 				@include calc(width, "100vw + " 30px);
-				@include translate(0,$half_header_margin,0);
+				@include translate(-45px,$half_header_margin,0);
 				@include flexbox(center,center);
 				background-color: rgba(18,23,26,0.97);
 				z-index: 990;
@@ -485,7 +485,7 @@ span:not(.cat-total){
 		#page {
 			#content {
 				.menu-main-menu-container, .menu-footer-menu-container {
-					@include translate(-45px,$half_header_margin,0);
+					@include translate(0,$half_header_margin,0);
 				}
 				#menu-main-menu {
 					margin: auto;
