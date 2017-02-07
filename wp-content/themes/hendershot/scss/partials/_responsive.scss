@@ -318,7 +318,7 @@ body.page-template-home {
 				left: auto;
 				height: 100vh;
 				@include calc(width, "100vw + " 30px);
-				@include translate(-30px,$half_header_margin,0);
+				@include translate(-60px,$half_header_margin,0);
 				@include flexbox(center,center);
 				background-color: rgba(18,23,26,0.97);
 				z-index: 990;
