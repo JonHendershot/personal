@@ -46,7 +46,7 @@
 </div>
 <div class="project-section project-introduction contained">
 	<h2>Introduction</h2>
-	<p class="project-copy"><?php echo $intro_body; ?></p>
+	<div class="project-copy"><?php echo $intro_body; ?></div>
 </div>
 
 <?php
@@ -107,7 +107,7 @@
 						<div class="title-wrapper">
 							<h2>'. ${"part_{$ll}_title"} .'</h2>
 						</div>
-						<p class="project-copy">'. ${"part_{$ll}_copy"} .'</p>
+						<div class="project-copy">'. ${"part_{$ll}_copy"} .'</div>
 					</div>';
 			
 				
@@ -138,7 +138,7 @@
 
 <div class="project-conclusion project-section contained">
 	<h2>Conclusion</h2>
-	<p class="project-copy"><?php echo $conclusion_body; ?></p>
+	<div class="project-copy"><?php echo $conclusion_body; ?></div>
 </div>
 <div class="project-nav contained">
 	<?php 

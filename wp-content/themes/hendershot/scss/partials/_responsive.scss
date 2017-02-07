@@ -62,6 +62,10 @@ body.page-template-home {
 				.project-cat {
 					.project-copy {
 						padding: 0 $half_side_pad;
+						p {
+							width: 100%;
+							padding: 0;
+						}
 					}
 				}
 				.project-file-container {
