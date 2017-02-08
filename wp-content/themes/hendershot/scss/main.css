@@ -255,8 +255,7 @@ a.previous:after {
   /* Mozilla ? */
   transform: rotate(-90deg);
   transform-origin: left;
-  margin-bottom: 6px;
-  display: none; }
+  margin-bottom: 6px; }
 
 .main-btn {
   text-transform: uppercase;
@@ -864,10 +863,23 @@ body.single section.main-body {
     -webkit-align-items: center;
     justify-content: flex-start;
     -webkit-justify-content: flex-start;
-    margin-top: 0;
+    height: -o-calc(100vh -  180px);
+    height: -moz-calc(100vh -  180px);
+    height: -webkit-calc(100vh -  180px);
+    height: calc(100vh -  180px);
+    margin: 0 auto;
     position: relative; }
+    body.single section.main-body article .project-heading a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 9px;
+      margin-left: 11px; }
     body.single section.main-body article .project-heading h1 {
-      margin-top: 50px; }
+      word-wrap: break-word;
+      word-spacing: 1000px; }
+  body.single section.main-body article .project-introduction {
+    margin-top: 60px; }
   body.single section.main-body article .project-nav {
     margin: -40px auto 50px;
     position: relative;
