@@ -778,6 +778,12 @@ body.single section.main-body {
         font-size: 16px;
         margin-right: 10px;
         font-weight: 600; }
+    body.single section.main-body article .project-section a {
+      font-family: "Georgia", serif;
+      font-size: inherit;
+      font-weight: inherit;
+      border-bottom: 1px dashed #12171a;
+      text-transform: none; }
     body.single section.main-body article .project-section pre {
       max-width: 70%;
       text-align: center;
