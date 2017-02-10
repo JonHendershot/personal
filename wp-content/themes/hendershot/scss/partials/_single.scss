@@ -32,7 +32,7 @@ body.single {
 				}
 				a {
 					font-family: $body_font;
-					font-size: inherit;
+					font-size: inherit !important;
 					font-weight: inherit;
 					border-bottom: 1px dashed $black;
 					text-transform: none;

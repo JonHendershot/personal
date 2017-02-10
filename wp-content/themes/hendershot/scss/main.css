@@ -780,7 +780,7 @@ body.single section.main-body {
         font-weight: 600; }
     body.single section.main-body article .project-section a {
       font-family: "Georgia", serif;
-      font-size: inherit;
+      font-size: inherit !important;
       font-weight: inherit;
       border-bottom: 1px dashed #12171a;
       text-transform: none; }
