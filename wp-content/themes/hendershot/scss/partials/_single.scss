@@ -30,13 +30,15 @@ body.single {
 						font-weight: 600;
 					}
 				}
-				a {
-					font-family: $body_font;
-					font-size: inherit !important;
-					font-weight: inherit;
-					border-bottom: 1px dashed $black;
-					text-transform: none;
-					
+				p{
+					a {
+						font-family: $body_font;
+						font-size: inherit !important;
+						font-weight: inherit;
+						border-bottom: 1px dashed $black;
+						text-transform: none;
+						
+					}
 				}
 				pre {
 					max-width: 70%;
