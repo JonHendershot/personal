@@ -811,6 +811,9 @@ body.single section.main-body {
 						padding: 0;
 					}
 */ }
+      body.single section.main-body article .project-section div.project-copy p img {
+        width: 100%;
+        height: auto; }
     body.single section.main-body article .project-section a {
       font-size: 12px; }
     body.single section.main-body article .project-section a.previous {
