@@ -1,5 +1,5 @@
 (function fader($){
-	$(document).ready(function(){ // display body once everything is loaded
+	$(window).load(function(){ // display body once everything is loaded
 		$('body#off').removeAttr('id');
 	});
 	
@@ -24,7 +24,7 @@
 				var scheme = clicked.data('scheme'),
 					bgColor = colorSchemes[scheme];
 					
-				$('html').css({'background-color':bgColor});
+				$('body').css({'background-color':bgColor});
 				
 			},800);
 			
