@@ -151,3 +151,13 @@ function register_menu() {
   register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
 add_action( 'init', 'register_menu' );
+
+// Add data attribute to menu items if we're on the single page so that we can envoke the page fade background color transiton function
+add_filter( 'nav_menu_link_attributes', 'menu_page_fader', 10, 3 );
+function menu_page_fader( $atts, $item, $args )
+{
+  if (is_single()) {
+    $atts['data-scheme'] = 'light';
+  }
+  return $atts;
+}
