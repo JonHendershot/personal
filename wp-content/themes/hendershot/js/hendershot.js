@@ -17,9 +17,7 @@
 		$('body').attr('id','off');
 
 		if(this.hasAttribute('data-scheme')){
-			
-			alert('scheme');
-			
+						
 			setTimeout(function(){
 				var scheme = clicked.data('scheme'),
 					bgColor = colorSchemes[scheme];
