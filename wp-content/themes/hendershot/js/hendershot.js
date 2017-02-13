@@ -28,7 +28,7 @@
 			
 			setTimeout(function(){
 				window.location = newLocation;
-			},1300);
+			},1200);
 			
 		}else {
 			setTimeout(function(){
