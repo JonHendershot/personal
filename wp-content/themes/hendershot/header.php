@@ -22,7 +22,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="off">
 <div id="page" class="site">
 	<div id="content" class="site-content">
 		<?php wp_nav_menu(array('theme_location' => 'Primary', 'menu' => 'Main Menu')); ?>

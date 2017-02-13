@@ -1,3 +1,46 @@
+(function fader($){
+	$(document).ready(function(){ // display body once everything is loaded
+		$('body#off').removeAttr('id');
+	});
+	
+	$('a').click(function(){
+		
+		event.preventDefault(); // don't send to the link yet
+		
+		var clicked = $(this),
+			newLocation = this.href,
+			colorSchemes = {
+				"light" : "#12171a",
+				"dark" : "#ffffff"
+			};
+		
+		$('body').attr('id','off');
+
+		if(this.hasAttribute('data-scheme')){
+			
+			alert('scheme');
+			
+			setTimeout(function(){
+				var scheme = clicked.data('scheme'),
+					bgColor = colorSchemes[scheme];
+					
+				$('html').css({'background-color':bgColor});
+				
+			},800);
+			
+			setTimeout(function(){
+				window.location = newLocation;
+			},1300);
+			
+		}else {
+			setTimeout(function(){
+				window.location = newLocation;
+			},600);
+		}
+		
+	
+	});
+}(jQuery));
 (function projectNav($){
 	
 	// Nav Arrow Click

@@ -26,7 +26,7 @@
 
 <div class="project-section project-heading contained vh">
 	<div class="heading-container">
-		<a href="<?php echo home_url() . '/projects'; ?>" class="previous light">Return to Projects</a>
+		<a href="<?php echo home_url() . '/projects'; ?>" class="previous light" data-scheme="light">Return to Projects</a>
 		<h1 class="<?php echo $fix_class; ?>"><?php echo $project_title; ?></h1>
 		<p class="sub-title">
 			<?php 

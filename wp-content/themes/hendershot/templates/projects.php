@@ -38,7 +38,7 @@
 				?>
 					<div class="project-wrapper <?php echo "project-$xx $active_project $color_scheme"; ?>" style="background-image:url(<?php echo $image; ?>);">
 						<div class="project-content">
-							<a href="<?php the_permalink(); ?>" class="content-link">
+							<a href="<?php the_permalink(); ?>" class="content-link" data-scheme="<?php echo $color_scheme; ?>">
 								<h1><?php echo $title; ?></h1>
 							</a>
 							<a href="<?php the_permalink(); ?>" class="content-link">
@@ -62,7 +62,7 @@
 								</p>
 							</a>
 						</div>
-						<a href="<?php the_permalink(); ?>" class="view-project next <?php echo $color_scheme; ?>">view project</a>
+						<a href="<?php the_permalink(); ?>" class="view-project next <?php echo $color_scheme; ?>" data-scheme="<?php echo $color_scheme; ?>">view project</a>
 					</div>
 				<?php $xx++; endwhile; ?>
 			</div>
