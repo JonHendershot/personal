@@ -455,6 +455,8 @@ section.home-container {
       height: 100%;
       width: 100%; }
       .projects .container .content.projects-container .project-wrapper {
+        transform: matrix3d(1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transoform: matrix3d(1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
         height: 100%;
         width: 100%;
         background-position: center center;
@@ -627,6 +629,12 @@ section.home-container {
     transform: rotate(180deg); }
   .projects .project-nav.previous {
     left: -12px; }
+
+.project-wrapper.matrix {
+  /*
+	transform: matrix3d(1,0,0.00,-.00004,0.00,1,0.00,-0.00005,0,0,1,0,0,0,0,1);
+	-webkit-transform: matrix3d(1,0,0.00,-.00004,0.00,1,0.00,-0.00005,0,0,1,0,0,0,0,1);
+*/ }
 
 section.about .content {
   margin: 0 auto; }

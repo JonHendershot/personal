@@ -31,12 +31,14 @@
 					$color_scheme = strtolower($color_scheme_field);
 					if($xx === 1){
 						$active_project = 'active';
+						$matrix = 'matrix';
 					}else {
 						$active_project = '';
+						$matrix = '';
 					}
 					
 				?>
-					<div class="project-wrapper <?php echo "project-$xx $active_project $color_scheme"; ?>" style="background-image:url(<?php echo $image; ?>);">
+					<div class="project-wrapper <?php echo "project-$xx $active_project $color_scheme $matrix"; ?>" style="background-image:url(<?php echo $image; ?>);">
 						<div class="project-content">
 							<a href="<?php the_permalink(); ?>" class="content-link" data-scheme="<?php echo $color_scheme; ?>">
 								<h1><?php echo $title; ?></h1>

@@ -93,6 +93,17 @@ $side_padding: 120px;
 	     -o-transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); 
 	        transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); /* custom */
 }
+@mixin projectease($duration, $duration_2){
+	-webkit-transition: opacity $duration cubic-bezier(0.740, 0.005, 0.240, 0.995), transform $duration_2 cubic-bezier(0.250, 0.250, 0.005, 1.000); 
+	   -moz-transition: opacity $duration cubic-bezier(0.740, 0.005, 0.240, 0.995), transform $duration_2 cubic-bezier(0.250, 0.250, 0.005, 1.000); 
+	     -o-transition: opacity $duration cubic-bezier(0.740, 0.005, 0.240, 0.995), transform $duration_2 cubic-bezier(0.250, 0.250, 0.005, 1.000); 
+	        transition: opacity $duration cubic-bezier(0.740, 0.005, 0.240, 0.995), transform $duration_2 cubic-bezier(0.250, 0.250, 0.005, 1.000); /* custom */
+	
+	-webkit-transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); 
+	   -moz-transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); 
+	     -o-transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); 
+	        transition-timing-function: cubic-bezier(0.740, 0.005, 0.240, 0.995); /* custom */
+}
 @mixin bounceOut($length){
 	-webkit-transition: all $length cubic-bezier(0.485, 0.095, 0.705, 1); /* older webkit */
 -webkit-transition: all $length cubic-bezier(0.485, 0.095, 0.705, 1.650); 

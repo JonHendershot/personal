@@ -1,6 +1,9 @@
 (function fader($){
 	$(window).load(function(){ // display body once everything is loaded
 		$('body#off').removeAttr('id');
+		if($('.project-wrapper.matrix').length){
+			$('.project-wrapper.matrix').removeClass('matrix');
+		}
 	});
 	
 	$('a').click(function(){
