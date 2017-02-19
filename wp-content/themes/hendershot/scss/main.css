@@ -24,6 +24,13 @@ html, body {
 body#off {
   opacity: 0; }
 
+p a {
+  font-family: "Georgia", serif;
+  font-size: inherit !important;
+  font-weight: inherit;
+  border-bottom: 1px dashed #12171a;
+  text-transform: none; }
+
 .index-image {
   position: absolute;
   width: 10px;
