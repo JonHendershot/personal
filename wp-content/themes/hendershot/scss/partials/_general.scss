@@ -11,13 +11,6 @@ body#off {
 body {
 
 }
-p a {
-	font-family: $body_font;
-	font-size: inherit !important;
-	font-weight: inherit;
-	border-bottom: 1px dashed $black;
-	text-transform: none;	
-}
 .index-image {
 	position: absolute;
 	width: 10px;
