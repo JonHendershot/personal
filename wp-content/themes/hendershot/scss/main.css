@@ -1034,9 +1034,10 @@ body.page-template-home #content .page-content {
 */ }
     body.single #page #content section.main-body article.project-study .project-section h1 {
       word-spacing: 680px;
-      font-size: 48px;
-      line-height: 40px;
-      margin-left: -3.5px; }
+      font-size: 46px;
+      line-height: 34px;
+      margin-left: -3.5px;
+      letter-spacing: -2px; }
     body.single #page #content section.main-body article.project-study .project-section .sub-title span {
       font-size: 12px;
       display: block; }
