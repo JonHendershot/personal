@@ -27,7 +27,7 @@
 					
 				$('body').css({'background-color':bgColor});
 				
-			},800);
+			},600);
 			
 			setTimeout(function(){
 				window.location = newLocation;
@@ -36,7 +36,7 @@
 		}else {
 			setTimeout(function(){
 				window.location = newLocation;
-			},600);
+			},1000);
 		}
 		
 	
