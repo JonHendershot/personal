@@ -142,7 +142,7 @@
 	<h2>Conclusion</h2>
 	<div class="project-copy"><?php echo $conclusion_body; ?></div>
 	<?php if($project_link && $project_link_text){
-			echo "<a href='$project_link' id='project-link' class='next light'>$project_link_text</a>";
+			echo "<a target='_blank' href='$project_link' id='project-link' class='next light'>$project_link_text</a>";
 	}
 	?>
 </div>
