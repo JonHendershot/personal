@@ -9,6 +9,8 @@
 		$cc = 1;
 		$intro_body = get_field('introduction');
 		$conclusion_body = get_field('conclusion');
+		$project_link_text = get_field('link_text');
+		$project_link = get_field('project_link');
 		
 		// Title Fix
 		// The heading font face displays an odd space before the first letter, causing some spacing issues. Thus, we will define which letters have issues, detect if the title starts with one of those letters, and apply a css class to remedy the issue should it be present.
@@ -139,6 +141,10 @@
 <div class="project-conclusion project-section contained">
 	<h2>Conclusion</h2>
 	<div class="project-copy"><?php echo $conclusion_body; ?></div>
+	<?php if($project_link && $project_link_text){
+			echo "<a href='$project_link' id='project-link' class='next light'>$project_link_text</a>";
+	}
+	?>
 </div>
 <div class="project-nav contained">
 	<?php 

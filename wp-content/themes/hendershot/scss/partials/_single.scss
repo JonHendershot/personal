@@ -150,6 +150,20 @@ body.single {
 			.project-introduction {
 				margin-top: 60px;
 			}
+			#project-link {
+				font-size: 24px;
+				margin: 100px auto 150px;
+				text-align: center;
+				display: block;
+				@include max-content(width);
+			}
+			#project-link:after {
+				height: 16px;
+				width: 16px;
+				right: -23px;
+				top: 3px;
+				
+			}
 			.project-nav {
 				margin: -40px auto 50px;
 				position: relative;

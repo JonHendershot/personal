@@ -10,7 +10,12 @@
 	<div class="page-content">
 		<div>
 			<h1>Jon Hendershot</h1>
-			<p class="sub-title">Web Developer</p>
+			<div class="creative-titles">
+				<p class="sub-title visible slide-1" data-id="1">Full-Stack Developer</p>
+				<p class="sub-title slide-2" data-id="2">UX Designer</p>
+				<p class="sub-title slide-3" data-id="3">Brand Strategist</p>
+				<p class="sub-title slide-4" data-id="4">UI Designer</p>
+			</div>
 		</div>
 	</div>
 </section>

@@ -80,7 +80,29 @@
 		$(this).css({'height' : height});
 	});
 }(jQuery));
-
+(function homeSlider($){
+	if($('.creative-titles').length){
+		var slider = $('.creative-titles'),
+			activeSlide = $('.creative-titles .sub-title.visible'),
+			activeID = parseInt(activeSlide.data('id')),
+			pNextID = activeID + 1;
+			
+		// Handle Next Slides
+		if($('.sub-title.slide-' + pNextID).length){
+			var nextID = pNextID;
+		}else {
+			var nextID = 1;
+		}
+			
+		setTimeout(function(){
+			activeSlide.removeClass('visible');
+			$('.sub-title.slide-' + nextID).addClass('visible');
+			
+			homeSlider($);	
+			console.log('fired');
+		}, 3500);
+	}		
+}(jQuery));
 function nextProject(postID){
 	var $ = jQuery,
 		nextPostID = parseInt(postID) + 1,

@@ -419,6 +419,21 @@ section.home-container {
       margin: 0;
       font-size: 21px;
       padding-right: 2px; }
+    section.home-container .page-content div.creative-titles {
+      position: relative; }
+      section.home-container .page-content div.creative-titles p {
+        opacity: 0;
+        transition: 1.5s all ease-in-out;
+        -webkit-transform: translate3d(0px, 0, 0);
+        -moz-transform: translate3d(0px, 0, 0);
+        -ms-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0); }
+      section.home-container .page-content div.creative-titles p:not(:first-child) {
+        position: absolute;
+        top: 0;
+        right: 0; }
+      section.home-container .page-content div.creative-titles p.visible {
+        opacity: 1; }
 
 .projects {
   width: 100%;
@@ -906,6 +921,20 @@ body.single section.main-body {
       word-spacing: 1000px; }
   body.single section.main-body article .project-introduction {
     margin-top: 60px; }
+  body.single section.main-body article #project-link {
+    font-size: 24px;
+    margin: 100px auto 150px;
+    text-align: center;
+    display: block;
+    width: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -moz-fit-content; }
+  body.single section.main-body article #project-link:after {
+    height: 16px;
+    width: 16px;
+    right: -23px;
+    top: 3px; }
   body.single section.main-body article .project-nav {
     margin: -40px auto 50px;
     position: relative;
