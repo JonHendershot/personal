@@ -1074,6 +1074,15 @@ body.page-template-home #content .page-content {
       display: none; }
     body.single #page #content section.main-body article.project-study .project-section .project-copy {
       font-size: 15px; }
+    body.single #page #content section.main-body article.project-study #project-link {
+      margin: 100px 0 150px;
+      text-align: left;
+      font-size: 19px; }
+    body.single #page #content section.main-body article.project-study .project-nav {
+      flex-direction: column;
+      width: 100%; }
+      body.single #page #content section.main-body article.project-study .project-nav a {
+        margin: 5px auto; }
   body #page #content {
     width: -o-calc(100% - 60px);
     width: -moz-calc(100% - 60px);

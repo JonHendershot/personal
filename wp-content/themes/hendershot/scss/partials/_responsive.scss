@@ -191,6 +191,19 @@ body.page-template-home {
 								font-size: 15px;
 							}
 						}
+						#project-link {
+							margin: 100px 0 150px;
+							text-align: left;
+							font-size: 19px;
+						}
+						.project-nav {
+							flex-direction: column;
+							width: 100%;
+							
+							a {
+								margin: 5px auto;
+							}
+						}
 					}
 				}
 			}
