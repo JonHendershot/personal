@@ -7,39 +7,39 @@
 	});
 	
 	$('a').click(function(){
+		if( ! $(this).hasClass('project-link')){
+			event.preventDefault(); // don't send to the link yet
 		
-		event.preventDefault(); // don't send to the link yet
-		
-		var clicked = $(this),
-			newLocation = this.href,
-			colorSchemes = {
-				"light" : "#12171a",
-				"dark" : "#ffffff"
-			};
-		
-		$('body').attr('id','off');
-
-		if(this.hasAttribute('data-scheme')){
-						
-			setTimeout(function(){
-				var scheme = clicked.data('scheme'),
-					bgColor = colorSchemes[scheme];
-					
-				$('body').css({'background-color':bgColor});
-				
-			},600);
+			var clicked = $(this),
+				newLocation = this.href,
+				colorSchemes = {
+					"light" : "#12171a",
+					"dark" : "#ffffff"
+				};
 			
-			setTimeout(function(){
-				window.location = newLocation;
-			},1200);
-			
-		}else {
-			setTimeout(function(){
-				window.location = newLocation;
-			},1000);
-		}
-		
+			$('body').attr('id','off');
 	
+			if(this.hasAttribute('data-scheme')){
+							
+				setTimeout(function(){
+					var scheme = clicked.data('scheme'),
+						bgColor = colorSchemes[scheme];
+						
+					$('body').css({'background-color':bgColor});
+					
+				},600);
+				
+				setTimeout(function(){
+					window.location = newLocation;
+				},1200);
+				
+			}else {
+				setTimeout(function(){
+					window.location = newLocation;
+				},1000);
+			}
+
+		}		
 	});
 }(jQuery));
 (function projectNav($){
