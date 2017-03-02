@@ -953,6 +953,9 @@ body.single section.main-body {
       margin-right: 16px; }
     body.single section.main-body article .project-nav a {
       font-size: 12px; }
+  body.single section.main-body article ol {
+    max-width: 65%;
+    margin: 10px auto; }
 
 /*************************************
   - - - - - - - RESPOND - - - - - - - -
