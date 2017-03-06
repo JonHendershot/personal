@@ -7,7 +7,9 @@
 	});
 	
 	$('a').click(function(){
-		if( ! $(this).hasClass('project-link')){
+		var target = $(this).attr('target');
+		
+		if( ! $(this).hasClass('project-link') && target !== '_blank' ){
 			event.preventDefault(); // don't send to the link yet
 		
 			var clicked = $(this),
