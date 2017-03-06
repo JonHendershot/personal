@@ -24,8 +24,13 @@
 			if(this.hasAttribute('data-scheme')){
 							
 				setTimeout(function(){
-					var scheme = clicked.data('scheme'),
-						bgColor = colorSchemes[scheme];
+					if(clicked.hasClass('view-project')){
+						var bgColor = colorSchemes['dark'];
+					}else {
+						var scheme = clicked.data('scheme'),
+							bgColor = colorSchemes[scheme];
+					}
+					
 						
 					$('body').css({'background-color':bgColor});
 					
