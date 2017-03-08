@@ -119,13 +119,13 @@ body.single {
 	#menu-footer-menu {
 		bottom: 0;
 		left: 0;
-		margin-left: 20px;
+		margin-left: 28px;
 		@include translate(0,50%,0);
 	}
 	#menu-main-menu {
 		top: 0;
 		right: 0;
-		margin-right: 20px;
+		margin-right: 28px;
 		@include translate(0,-57%,0);
 	}
 }
@@ -188,7 +188,7 @@ a.next:after, a.previous:after, .scroll-hint:before {
 	height: 8px;
 	width: 15px;
 	position: absolute;
-	top: -2px;
+	top: 0px;
 	bottom: 0;
 	margin: auto;
 	background-position: center center;
@@ -211,6 +211,7 @@ a.previous:after{
 	left: -11px;
 	height: 7px;
 	width: 7px;
+	@include easeout(2000ms);
 }
 .scroll-hint {
 	position: absolute;
@@ -221,9 +222,10 @@ a.previous:after{
 	letter-spacing: 1px;
 	bottom: 0;
     left: 0;
-    @include rotate(-90deg);
+    @include transrotate(0,0,0,-90deg);
     transform-origin: left;
     margin-bottom: 6px;
+    @include easeout(2000ms);
 }
 .main-btn {
 	text-transform: uppercase;

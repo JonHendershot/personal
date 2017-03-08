@@ -1,0 +1,36 @@
+// Animations for the page transitions
+body.anim{
+	// Projects
+	.project-content {
+		h1 {
+			@include translate(0,35px,0);
+			opacity: 0;
+		}
+		.sub-title {
+			@include translate(0,50px,0);
+			opacity: 0;
+		}
+	}
+	
+	// Single Page
+	.project-heading {
+		.scroll-hint {
+			@include transrotate(0,-20px,0,-90deg);	
+		}
+		.scroll-hint:before {
+			@include translate(-10px,0,0);
+		}
+		a.previous {
+			@include translate(20px,0,0);
+		}
+		a.previous:after {
+			@include translate(-10px,0,0);
+		}
+		a.project-link-header {
+			opacity: 0;
+		}
+		a.project-link-header:after {
+			@include transrotate(6px,0,0,180deg);
+		}
+	}
+}

@@ -49,10 +49,13 @@
 						padding-left: 7px;
 						text-align: center;
 						margin: 0;
+						@include easeout(2000ms);
 					}
 					p.sub-title {
 						text-align: center;
 						padding-left: 4px;
+						@include easeout(2000ms);
+						transition-delay: 0;
 						span {
 							font-family: $heading_font;
 							font-size: 13px;

@@ -140,11 +140,32 @@ body.single {
 					left: 0;
 					font-size: 9px;
 					margin-left: 11px;
+					@include easeout(2000ms);
 				}
+				a:after {
+					@include easeout(2000ms);
+				}
+
 				h1 {
 					word-wrap: break-word;
 					word-spacing: 1000px;
 				
+				}
+				a.project-link-header {
+					position: relative;
+					margin-left: 0;
+					top: 2px;
+					display: block;
+					@include max-content(width);
+					@include transition(1200ms,all,ease-out);
+					transition-delay: 1000ms;
+				}
+				a.project-link-header:after {
+					width: 23px;
+					height: 7px;
+					top: 0px;
+					@include transition(800ms,all,ease-out);
+					transition-delay: 1000ms;
 				}
 			}
 			.project-introduction {

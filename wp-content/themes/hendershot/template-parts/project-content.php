@@ -43,6 +43,8 @@
 				}
 			?>
 		</p>
+		<?php if($project_link) { echo "<a href='$project_link' class='next project-link-header light'>$project_link_text</a>"; } ?>
+
 		<div class="scroll-hint">scroll down</div>
 	</div>
 </div>
