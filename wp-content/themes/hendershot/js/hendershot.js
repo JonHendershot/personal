@@ -104,10 +104,9 @@
 		setTimeout(function(){
 			activeSlide.removeClass('visible');
 			$('.sub-title.slide-' + nextID).addClass('visible');
-			
-			homeSlider($);	
-			console.log('fired');
+			homeSlider($);
 		}, 3500);
+		
 	}		
 }(jQuery));
 function nextProject(postID){
