@@ -112,12 +112,12 @@
 			setTimeout(function(){
 				$('.sub-title.slide-' + nextID).addClass('visible');
 				
-			}, 900);
+			}, 1100);
 			
 			// Call function Loop
 			homeSlider($);
 			
-		}, 4500);
+		}, 4750);
 		
 	}		
 }(jQuery));
