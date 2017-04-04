@@ -89,23 +89,35 @@
 }(jQuery));
 (function homeSlider($){
 	if($('.creative-titles').length){
-		var slider = $('.creative-titles'),
+		
+		setTimeout(function(){
+	
+			// Set Variables inside of setTimeout so that we don't drop slides in the second setTimeout for nextSlide
+			var slider = $('.creative-titles'),
 			activeSlide = $('.creative-titles .sub-title.visible'),
 			activeID = parseInt(activeSlide.data('id')),
 			pNextID = activeID + 1;
 			
-		// Handle Next Slides
-		if($('.sub-title.slide-' + pNextID).length){
-			var nextID = pNextID;
-		}else {
-			var nextID = 1;
-		}
+			// Handle Next Slides
+			if($('.sub-title.slide-' + pNextID).length){
+				var nextID = pNextID;
+			}else {
+				var nextID = 1;
+			}
 			
-		setTimeout(function(){
+			// Remove Current slide
 			activeSlide.removeClass('visible');
-			$('.sub-title.slide-' + nextID).addClass('visible');
+			
+			// Add next Slide
+			setTimeout(function(){
+				$('.sub-title.slide-' + nextID).addClass('visible');
+				
+			}, 900);
+			
+			// Call function Loop
 			homeSlider($);
-		}, 3500);
+			
+		}, 4500);
 		
 	}		
 }(jQuery));
