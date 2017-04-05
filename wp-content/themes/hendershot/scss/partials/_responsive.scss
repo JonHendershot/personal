@@ -544,3 +544,54 @@ span:not(.cat-total){
 		
 	}
 }
+
+// Non-Retina Specific Styles
+@media
+not screen and (-webkit-min-device-pixel-ratio: 2),
+not screen and (   min--moz-device-pixel-ratio: 2),
+not screen and (     -o-min-device-pixel-ratio: 2/1),
+not screen and (        min-device-pixel-ratio: 2),
+not screen and (                min-resolution: 192dpi),
+not screen and (                min-resolution: 2dppx) { 
+
+	// Menu Lines on Hover
+	#content {
+	  ul.menu {
+		  li {
+			  a:after {
+				  top: -1px;
+				}
+			}
+		}
+	}
+	
+	// Most Next Arrows
+	a.next:after, a.previous:after, .scroll-hint:before {
+		top: -3px;
+	}
+	
+	// See it In Action Arrow - header
+	body.single { 
+		section.main-body {
+			article {
+				.project-heading {
+					a.project-link-header:after {
+						top: -2px;					
+					}
+				}
+				#project-link:after {
+					top: 0;
+				}
+			}
+		}
+	}
+	
+	// 
+	section.contact {
+		.form {
+			.submit:after {
+				top: 0;
+			}
+		}
+	}
+}

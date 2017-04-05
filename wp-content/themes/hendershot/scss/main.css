@@ -1515,3 +1515,15 @@ span:not(.cat-total){
   body.page-template-home #page #content .creative-titles {
     text-align: left;
     margin-left: 0; } }
+
+@media not screen and (-webkit-min-device-pixel-ratio: 2), not screen and (min--moz-device-pixel-ratio: 2), not screen and (-o-min-device-pixel-ratio: 2/1), not screen and (min-device-pixel-ratio: 2), not screen and (min-resolution: 192dpi), not screen and (min-resolution: 2dppx) {
+  #content ul.menu li a:after {
+    top: -1px; }
+  a.next:after, a.previous:after, .scroll-hint:before {
+    top: -3px; }
+  body.single section.main-body article .project-heading a.project-link-header:after {
+    top: -2px; }
+  body.single section.main-body article #project-link:after {
+    top: 0; }
+  section.contact .form .submit:after {
+    top: 0; } }
