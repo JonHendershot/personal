@@ -58,10 +58,16 @@ $side_padding: 120px;
     transform: scale($percent);
 }
 @mixin scaleX($percent) {
-	    -ms-transform: scale($percent); /* IE 9 */
-    -webkit-transform: scale($percent); /* Chrome, Safari, Opera */
-    -moz-transform: scale($percent); /* Mozilla ? */
-    transform: scale($percent);
+	    -ms-transform: scaleX($percent); /* IE 9 */
+    -webkit-transform: scaleX($percent); /* Chrome, Safari, Opera */
+    -moz-transform: scaleX($percent); /* Mozilla ? */
+    transform: scaleX($percent);
+}
+@mixin scaleY($percent) {
+	    -ms-transform: scaleY($percent); /* IE 9 */
+    -webkit-transform: scaleY($percent); /* Chrome, Safari, Opera */
+    -moz-transform: scaleY($percent); /* Mozilla ? */
+    transform: scaleY($percent);
 }
 @mixin transrotate($X,$Y,$Z,$degree){
 		-webkit-transform: translate3d($X,$Y,$Z) rotate($degree);

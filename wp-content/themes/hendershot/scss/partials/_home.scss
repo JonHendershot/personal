@@ -16,16 +16,18 @@ section.home-container {
 		border-right: 6px solid $white;
 		padding-top: 20px;
 		padding-bottom: 14px;
-		
+		@include scaleY(1);
+		@include easeout(1000ms);
 		* {
 			text-align: right;
-			@include translate(-20px,0,0);
 		}
-		
 		h1 {
 			margin-bottom: 20px;
 			margin-top: 0;
-			
+			opacity: 1;
+			@include easeout(1500ms);
+			transition-delay: 600ms;
+			@include translate(0,0,0);
 		}
 		p {
 			letter-spacing: 15px;
@@ -33,9 +35,14 @@ section.home-container {
 			margin: 0;
 			font-size: 21px;
 			padding-right: 2px;
+			opacity: 1;
 		}
 		div.creative-titles {
 			position: relative;
+			@include easeout(1500ms);
+			transition-delay: 600ms;
+			@include translate(0,0,0);
+			transition-delay: 800ms;
 			
 			p {
 				opacity: 0;
@@ -53,5 +60,16 @@ section.home-container {
 				opacity: 1;
 			}
 		}
+		div.content-wrapper {
+			padding-right: 20px;
+		}
+	}
+	// Animations on Load
+	.page-content.pre {
+		@include scaleY(0);
+			h1.pre, .creative-titles.pre {
+				@include translate(20px,0,0);
+				opacity: 0;
+			}
 	}
 }

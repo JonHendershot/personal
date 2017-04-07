@@ -4,6 +4,14 @@
 		if($('.project-wrapper.matrix').length){
 			$('.project-wrapper.matrix').removeClass('matrix');
 		}
+		
+		// Animate Home page content
+		if($('body.page-template-home').length){
+			// Load in the content after the page fades on
+			setTimeout(function(){
+				$('.page-content.pre, .page-content .pre').removeClass('pre');
+			},1000);
+		}
 	});
 	
 	$('a').click(function(){
