@@ -10,7 +10,12 @@
 			// Load in the content after the page fades on
 			setTimeout(function(){
 				$('.page-content.pre, .page-content .pre').removeClass('pre');
-			},1000);
+			},800);
+			
+			// Animate menu on after page content 
+			setTimeout(function(){
+				$('#menu-main-menu li').addClass('set');
+			},3000);
 		}
 	});
 	

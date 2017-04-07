@@ -393,6 +393,34 @@ input:not([type="submit"]):focus, textarea:focus {
 body.page-template-home .mobile-menu-trigger.footer {
   display: none; }
 
+body.page-template-home #menu-main-menu li {
+  -webkit-transform: translate3d(0, -10px, 0);
+  -moz-transform: translate3d(0, -10px, 0);
+  -ms-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+  -webkit-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+  -moz-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+  -o-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+  transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+  /* custom */
+  opacity: 0; }
+
+body.page-template-home #menu-main-menu li.set {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+body.page-template-home #menu-main-menu li:nth-child(1) {
+  transition-delay: 100ms; }
+
+body.page-template-home #menu-main-menu li:nth-child(2) {
+  transition-delay: 200ms; }
+
+body.page-template-home #menu-main-menu li:nth-child(3) {
+  transition-delay: 300ms; }
+
 section.home-container {
   background-size: cover;
   background-position: left center;
@@ -418,10 +446,10 @@ section.home-container {
     -moz-transform: scaleY(1);
     /* Mozilla ? */
     transform: scaleY(1);
-    -webkit-transition: all 1000ms cubic-bezier(0.375, 0.005, 0, 1);
-    -moz-transition: all 1000ms cubic-bezier(0.375, 0.005, 0, 1);
-    -o-transition: all 1000ms cubic-bezier(0.375, 0.005, 0, 1);
-    transition: all 1000ms cubic-bezier(0.375, 0.005, 0, 1);
+    -webkit-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+    -moz-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+    -o-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+    transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
     /* custom */ }
     section.home-container .page-content * {
       text-align: right; }
@@ -429,12 +457,12 @@ section.home-container {
       margin-bottom: 20px;
       margin-top: 0;
       opacity: 1;
-      -webkit-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      -moz-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      -o-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+      -webkit-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      -moz-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      -o-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
       /* custom */
-      transition-delay: 600ms;
+      transition-delay: 800ms;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
@@ -448,17 +476,18 @@ section.home-container {
       opacity: 1; }
     section.home-container .page-content div.creative-titles {
       position: relative;
-      -webkit-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      -moz-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      -o-transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
-      transition: all 1500ms cubic-bezier(0.375, 0.005, 0, 1);
+      -webkit-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      -moz-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      -o-transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
+      transition: all 2000ms cubic-bezier(0.375, 0.005, 0, 1);
       /* custom */
       transition-delay: 600ms;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
-      transition-delay: 800ms; }
+      transition-delay: 1200ms;
+      opacity: 1; }
       section.home-container .page-content div.creative-titles p {
         opacity: 0;
         transition: 1.5s all ease-in-out;
@@ -483,10 +512,10 @@ section.home-container {
     /* Mozilla ? */
     transform: scaleY(0); }
     section.home-container .page-content.pre h1.pre, section.home-container .page-content.pre .creative-titles.pre {
-      -webkit-transform: translate3d(20px, 0, 0);
-      -moz-transform: translate3d(20px, 0, 0);
-      -ms-transform: translate3d(20px, 0, 0);
-      transform: translate3d(20px, 0, 0);
+      -webkit-transform: translate3d(15px, 0, 0);
+      -moz-transform: translate3d(15px, 0, 0);
+      -ms-transform: translate3d(15px, 0, 0);
+      transform: translate3d(15px, 0, 0);
       opacity: 0; }
 
 .projects {

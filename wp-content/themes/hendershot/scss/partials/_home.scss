@@ -2,6 +2,23 @@ body.page-template-home{
 	.mobile-menu-trigger.footer {
 		display: none;
 	}
+	#menu-main-menu {
+		li {
+			@include translate(0,-10px,0);
+			@include easeout(1500ms);
+			opacity: 0;
+		}
+		li.set {
+			@include translate(0,0,0);
+			opacity: 1;
+		}
+		@for $ii from 1 through 3 {
+			$delay: $ii * 100ms;
+			li:nth-child(#{$ii}){
+				transition-delay: $delay; 
+			}
+		}
+	}
 }
 section.home-container {
 	background-size: cover;
@@ -17,7 +34,7 @@ section.home-container {
 		padding-top: 20px;
 		padding-bottom: 14px;
 		@include scaleY(1);
-		@include easeout(1000ms);
+		@include easeout(1500ms);
 		* {
 			text-align: right;
 		}
@@ -25,8 +42,8 @@ section.home-container {
 			margin-bottom: 20px;
 			margin-top: 0;
 			opacity: 1;
-			@include easeout(1500ms);
-			transition-delay: 600ms;
+			@include easeout(2000ms);
+			transition-delay: 800ms;
 			@include translate(0,0,0);
 		}
 		p {
@@ -39,10 +56,11 @@ section.home-container {
 		}
 		div.creative-titles {
 			position: relative;
-			@include easeout(1500ms);
+			@include easeout(2000ms);
 			transition-delay: 600ms;
 			@include translate(0,0,0);
-			transition-delay: 800ms;
+			transition-delay: 1200ms;
+			opacity: 1;
 			
 			p {
 				opacity: 0;
@@ -68,7 +86,7 @@ section.home-container {
 	.page-content.pre {
 		@include scaleY(0);
 			h1.pre, .creative-titles.pre {
-				@include translate(20px,0,0);
+				@include translate(15px,0,0);
 				opacity: 0;
 			}
 	}
