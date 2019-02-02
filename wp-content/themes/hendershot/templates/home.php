@@ -11,10 +11,7 @@
 		<div class="content-wrapper">
 			<h1 class="pre">Jon Hendershot</h1>
 			<div class="creative-titles pre">
-				<p class="sub-title visible slide-1" data-id="1">Full-Stack Developer</p>
-				<p class="sub-title slide-2" data-id="2">UI Designer</p>
-				<p class="sub-title slide-3" data-id="3">Brand Strategist</p>
-				<p class="sub-title slide-4" data-id="4">UX Designer</p>
+				<p class="sub-title visible slide-1" data-id="1">Developer</p>
 			</div>
 		</div>
 	</div>

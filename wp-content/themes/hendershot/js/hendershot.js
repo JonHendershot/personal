@@ -15,7 +15,7 @@
 			// Animate menu on after page content 
 			setTimeout(function(){
 				$('#menu-main-menu li').addClass('set');
-			},3000);
+			},2000);
 		}
 	});
 	
@@ -100,40 +100,40 @@
 		$(this).css({'height' : height});
 	});
 }(jQuery));
-(function homeSlider($){
-	if($('.creative-titles').length){
+// (function homeSlider($){
+// 	if($('.creative-titles').length){
 		
-		setTimeout(function(){
+// 		setTimeout(function(){
 	
-			// Set Variables inside of setTimeout so that we don't drop slides in the second setTimeout for nextSlide
-			var slider = $('.creative-titles'),
-			activeSlide = $('.creative-titles .sub-title.visible'),
-			activeID = parseInt(activeSlide.data('id')),
-			pNextID = activeID + 1;
+// 			// Set Variables inside of setTimeout so that we don't drop slides in the second setTimeout for nextSlide
+// 			var slider = $('.creative-titles'),
+// 			activeSlide = $('.creative-titles .sub-title.visible'),
+// 			activeID = parseInt(activeSlide.data('id')),
+// 			pNextID = activeID + 1;
 			
-			// Handle Next Slides
-			if($('.sub-title.slide-' + pNextID).length){
-				var nextID = pNextID;
-			}else {
-				var nextID = 1;
-			}
+// 			// Handle Next Slides
+// 			if($('.sub-title.slide-' + pNextID).length){
+// 				var nextID = pNextID;
+// 			}else {
+// 				var nextID = 1;
+// 			}
 			
-			// Remove Current slide
-			activeSlide.removeClass('visible');
+// 			// Remove Current slide
+// 			activeSlide.removeClass('visible');
 			
-			// Add next Slide
-			setTimeout(function(){
-				$('.sub-title.slide-' + nextID).addClass('visible');
+// 			// Add next Slide
+// 			setTimeout(function(){
+// 				$('.sub-title.slide-' + nextID).addClass('visible');
 				
-			}, 1100);
+// 			}, 1100);
 			
-			// Call function Loop
-			homeSlider($);
+// 			// Call function Loop
+// 			homeSlider($);
 			
-		}, 4750);
+// 		}, 4750);
 		
-	}		
-}(jQuery));
+// 	}		
+// }(jQuery));
 function nextProject(postID){
 	var $ = jQuery,
 		nextPostID = parseInt(postID) + 1,

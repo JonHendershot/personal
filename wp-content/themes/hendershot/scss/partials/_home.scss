@@ -13,7 +13,7 @@ body.page-template-home{
 			opacity: 1;
 		}
 		@for $ii from 1 through 3 {
-			$delay: $ii * 100ms;
+			$delay: $ii * 90ms;
 			li:nth-child(#{$ii}){
 				transition-delay: $delay; 
 			}
@@ -43,7 +43,7 @@ section.home-container {
 			margin-top: 0;
 			opacity: 1;
 			@include easeout(2000ms);
-			transition-delay: 800ms;
+			transition-delay: 600ms;
 			@include translate(0,0,0);
 		}
 		p {
@@ -56,10 +56,9 @@ section.home-container {
 		}
 		div.creative-titles {
 			position: relative;
-			@include easeout(2000ms);
-			transition-delay: 600ms;
+			@include easeout(2400ms);
 			@include translate(0,0,0);
-			transition-delay: 1200ms;
+			transition-delay: 800ms;
 			opacity: 1;
 			
 			p {
@@ -86,8 +85,11 @@ section.home-container {
 	.page-content.pre {
 		@include scaleY(0);
 			h1.pre, .creative-titles.pre {
-				@include translate(15px,0,0);
+				@include translate(10px,0,0);
 				opacity: 0;
+			}
+			.creative-titles.pre {
+				@include translate(10px,0,0);
 			}
 	}
 }
